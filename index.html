@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Leagues App</title>
+    
+    <script src="Jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <img src="assets/Modern_Flag_and_Crown_Soccer_Logo-removebg-preview.png" class="img-navbar">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Standings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="standings-premiere-league.html" target="_blank">Premiere League</a></li>
+                          <li><a class="dropdown-item" href="standings-serie-a.html" target="_blank">Serie A Italia</a></li>
+                          <li><a class="dropdown-item" href="standings-bundesliga.html" target="_blank">Bundesliga</a></li>
+                        </ul>
+                      </li>
+                    
+                      
+
+                      <a class="nav-link active" href="Topscore.html" target="_blank">Top Scorers</a>
+                     
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+
+        </div>
+            
+      </div>
+        
+          <div class="main-content">
+            <div class="upper">
+               <h1>THE LEAGUES APP</h1>
+                <p>See the standings, match schedules, and top scorers from 3 famous football leagues in Europe.<br>
+                    Also see the details of your idol team alongwith the entire squad list </p>
+                <div class="scrl-button">
+                  <a href="#premiere-league-id" class="btn-scrl-premiere-league"><button>Premiere League</button></a>
+                  <a href="#serie-a-id" class="btn-scrl-serie-a"><button>Serie A</button></a>
+                 <a href="#bundesliga-id" class="btn-scrl-bundesliga"> <button>Bundesliga </button></a>
+                </div>
+
+                <h5 class="scroll-text">scroll down</h5>
+                <img src="assets/scroll-down-arrow-unscreen.gif" alt="scroll gif" class="gif-scroll">
+            </div>
+
+           <div class="root-teams">
+  
+<!-----------------------------------SERIE A SECTION-------------------------------------------------------------------------------> 
+  
+                  <div class="Serie-A-section" id="serie-a-id">
+                    
+                    <div class="card-competition">
+                      <img src="assets/serieA-removebg-preview (1).png" alt="competition image" class ="competition-logo">
+                        <div class="text-competition">
+                          <p class="title-league">Italy Serie A League Teams</p>
+                          <p class="seasons seasons-serie-a"></p>
+                        </div>
+                    </div>
+
+                    <div class="inner-teams-section-0"></div>
+<!---------------------------------------------------------------------------------------------------------------------------------->                  
+
+<!-----------------------------------PREMIERE LEAGUE SECTION----------------------------------------------------------------------->             
+                
+                  <div class="Premiere-league-section" id="premiere-league-id">
+
+                    <div class="card-competition">
+                      <img src="assets/epl-removebg-preview.png" alt="competition image" class ="competition-logo">
+                        <div class="text-competition">
+                          <p class="title-league">English Premiere League Teams</p>
+                          <p class="seasons seasons-premiere-league"></p>
+                        </div>
+                    </div>
+
+                    <div class="inner-teams-section-1">
+
+
+                    </div>
+                  </div>
+<!----------------------------------------------------------------------------------------------------------------------------------> 
+
+<!-----------------------------------BUNDESLIGA SECTION----------------------------------------------------------------------->             
+                  
+                  <div class="Bundesliga-section" id="bundesliga-id">
+
+                    <div class="card-competition">
+                      <img src="assets/bundesliga.png" alt="competition image" class ="competition-logo">
+                        <div class="text-competition">
+                          <p class="title-league">Germany Bundesliga League Teams</p>
+                          <p class="seasons seasons-bundesliga"></p>
+                        </div>
+                    </div>
+
+                    <div class="inner-teams-section-2"></div>
+                  </div>
+<!----------------------------------------------------------------------------------------------------------------------------------> 
+
+          </div><!--DIV PENUTUP "root-teams"-->
+
+<!--------------------------------------MODAL DETAIL TEAM--------------------------------------------------------------------------->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4>Team Info</h4>
+                </div>
+                <div class="modal-body">
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+<!----------------------------------------------------------------------------------------------------------------------------------> 
+
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4>Team Squads</h4>
+                </div>
+                <div class="modal-body">
+                  <h4>Coming Soon</h4>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div><!--DIV PENUTUP "main-content"-->
+
+   
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+   
+   
+
+</body>
+</html>

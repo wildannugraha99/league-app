@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+   font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background: whitesmoke!important;
+}
+.title-competition{
+    display: flex;
+    margin-top: 4%;
+    margin-left: 4%;
+}
+.title-competition img{
+    width: 15%;
+}
+.text-title{
+    margin-top: 3.5%;
+    margin-left: 3%;
+   
+}
+.table{
+    text-align: center;
+    margin: auto;
+    width: 80% !important;
+   
+}
+.tr-body:nth-child(1){
+    background-color: rgb(218, 216, 216);
+}
+
+.tr-body:nth-child(2){
+    background-color: rgb(236, 233, 233);
+}
+
+.tr-body:nth-child(3){
+    background-color: rgb(250, 243, 243);
+}
+
+
+
+
+
+@media(min-width:1000px){
+    .title-competition{
+      
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+    .title-competition img{
+        width: 8%;
+    }
+
+    .text-title{
+        margin-top: 3%;
+        margin-left: 1%;
+    }
+    .table{
+       
+        font-size: 120%;
+    }
+}

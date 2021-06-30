@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+   font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background-color: whitesmoke;
+}
+
+.title{
+    display: flex;
+    margin-top: unset;
+    width:unset;
+    margin-left: unset;
+}
+
+.img-logo img{
+    width: 100%;
+    margin-top: 8%;
+    margin-left:0%;
+    
+}
+.img-logo{
+    flex-basis: 30%;
+}
+
+.text-title{
+  margin-right: 0%;
+  margin-top: 2.5%;
+  }
+
+.text-title h5{
+    margin-top: 7%;
+}
+
+.text-title p{
+    font-size: 80%;
+    margin-top: -4%;
+}
+
+.table{
+    margin:auto;
+    margin-top: 5%;
+    text-align: center;
+    width: unset;
+    font-size: 80%;
+}
+
+.posisi-team{
+    width: unset;
+    font-weight: bold;
+}
+.name-team{
+    width: unset;
+}
+
+.logo{
+    width: 20%;
+}
+
+.poin-team,.win-team,.draw-team,.lose-team{
+    width: unset;
+    
+}
+.tr-body:nth-child(1){
+    background-color: rgb(155, 255, 54);
+}
+
+.tr-body:nth-child(2){
+    background-color: rgb(205, 250, 132);
+}
+
+.tr-body:nth-child(3){
+    background-color: rgb(230, 252, 196);
+}
+
+.tr-body:nth-child(20){
+    background-color: rgb(255, 34, 34);
+}
+
+
+
+
+
+@media(min-width:1000px){
+
+    .title{
+        display: flex;
+        margin-top: 1%;
+        width:35%;
+        margin-left: 12.5%;
+    }
+    
+    .img-logo img{
+        width: 100%;
+        margin-top: 2%;
+        margin-left:0%;
+        
+    }
+    .img-logo{
+        flex-basis: 30%;
+       
+    }
+    
+    .text-title{
+      margin-right: 30%;
+      margin-top: 0%;
+      flex-basis: 70%;
+      
+      }
+    
+    .text-title h5{
+        margin-top: 7%;
+    }
+    
+    .text-title p{
+        font-size:90%;
+        margin-top: -2%;
+    }
+
+
+    .table{
+        margin-top: 2%;
+        width: 70%!important;
+        font-size: 105%;
+    }
+    .posisi-team{
+        width: 5%;
+       
+    }
+    .name-team{
+        width: 20%;
+       
+    }
+    
+    .poin-team,.win-team,.draw-team,.lose-team{
+        width: 5%;
+        
+    }
+    .logo{
+        width: 5%;
+    }
+}
