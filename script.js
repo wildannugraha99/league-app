@@ -31,7 +31,7 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-seeSquad" data-id="" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+			btnSeeSquad.innerHTML =`<button class="btn-seeSquad" data-bs-toggle="modal" data-bs-target="#exampleModal1">
 			See Squads</button>`
 
 			const CardsFooter = document.createElement('div')
@@ -89,7 +89,7 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-seeSquad" data-id="" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+			btnSeeSquad.innerHTML =`<button class="btn-seeSquad"  data-bs-toggle="modal" data-bs-target="#exampleModal1">
 			See Squads</button>`
 
 			const CardsFooter = document.createElement('div')
@@ -149,7 +149,7 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-SeeSquad" data-id="${data.id}" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+			btnSeeSquad.innerHTML =`<button class="btn-SeeSquad" data-bs-toggle="modal" data-bs-target="#exampleModal1">
 			See Squads</button>`
 
 			const CardsFooter = document.createElement('div')

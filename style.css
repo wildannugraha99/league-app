@@ -83,7 +83,7 @@ body{
    color: white;
    position: relative;
    top: 0;
-   transition: 0.3s;
+   
 }
 .btn-scrl-premiere-league button:hover{
    background-color: rgba(61,25,91, 1);
