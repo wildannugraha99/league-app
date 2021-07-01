@@ -26,15 +26,15 @@ body{
    
 }
 .tr-body:nth-child(1){
-    background-color: rgb(218, 216, 216);
+    background-color: rgb(169, 248, 149);
 }
 
 .tr-body:nth-child(2){
-    background-color: rgb(236, 233, 233);
+    background-color: rgb(217, 235, 119);
 }
 
 .tr-body:nth-child(3){
-    background-color: rgb(250, 243, 243);
+    background-color: rgb(240, 247, 179);
 }
 
 
