@@ -64,7 +64,14 @@ body{background-color: whitesmoke;}
     margin-bottom: 10%;
     text-align: center;
     padding-top: 1%;
+    transition: 1s;
 }
+
+.box-result:hover{
+    transform: scale(1.05);
+   
+}
+
 
 .boxHomeTeam,.middle,.boxAwayTeam{
     flex-basis: 33.5%;

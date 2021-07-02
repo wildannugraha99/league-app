@@ -31,7 +31,7 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-seeSquad" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+			btnSeeSquad.innerHTML =`<button class="btn-seeSquad disabled" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-disabled="true">
 			See Squads</button>`
 
 			const CardsFooter = document.createElement('div')
@@ -89,7 +89,7 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-seeSquad"  data-bs-toggle="modal" data-bs-target="#exampleModal1">
+			btnSeeSquad.innerHTML =`<button class="btn-seeSquad"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 			See Squads</button>`
 
 			const CardsFooter = document.createElement('div')
@@ -149,7 +149,7 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-SeeSquad" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+			btnSeeSquad.innerHTML =`<button class="btn-SeeSquad" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 			See Squads</button>`
 
 			const CardsFooter = document.createElement('div')
@@ -182,7 +182,7 @@ $(".main-content").on('click', ".btn-teamDetail", function () {
 		url: 'https://api.football-data.org/v2/teams/' + $(this).data('id'),
 		dataType: "json",
 		success: function (response) {
-			console.log('Team Detail', response)
+			
 			$('.modal-body').html(`
 				<div class="modalLogoTeam">
 					<img src="${response.crestUrl}">

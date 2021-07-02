@@ -164,7 +164,12 @@ body{
    margin-top: 10%;
    text-align: center;
    background-color: whitesmoke;
-  
+   transition: 1s;
+}
+
+.card-team:hover{
+   transform: scale(1.08);
+   
 }
 .cards-body{
    height: 60%;
@@ -183,6 +188,9 @@ body{
 .logo-team{
    width: 50%;
 }
+
+
+
 .cards-body h6{
    margin-top: 7%;
 }

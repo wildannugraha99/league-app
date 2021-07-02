@@ -65,11 +65,21 @@ $.ajax({
                     boxHomeTeam.style.borderBottomColor="lightgreen"
                     boxHomeTeam.style.borderBottomLeftRadius="10px"
 
-
                     boxAwayTeam.style.borderBottom="15px"
                     boxAwayTeam.style.borderBottomStyle="solid"
                     boxAwayTeam.style.borderBottomColor="red"
                     boxAwayTeam.style.borderBottomRightRadius="10px"
+                }else if(data.score.winner === "DRAW"){
+                    boxHomeTeam.style.borderBottom="15px"
+                    boxHomeTeam.style.borderBottomStyle="solid"
+                    boxHomeTeam.style.borderBottomColor="gray"
+                    boxHomeTeam.style.borderBottomLeftRadius="10px"
+
+                    boxAwayTeam.style.borderBottom="15px"
+                    boxAwayTeam.style.borderBottomStyle="solid"
+                    boxAwayTeam.style.borderBottomColor="gray"
+                    boxAwayTeam.style.borderBottomRightRadius="10px"
+
                 }else{
                     boxHomeTeam.style.borderBottom="15px"
                     boxHomeTeam.style.borderBottomStyle="solid"
@@ -94,14 +104,14 @@ $.ajax({
 function showData(){ 
     $('.html-root-content').html('');
     const optionValue = document.querySelector('.option-value');
-    
+
     $.ajax({
         headers: { 'X-Auth-Token': 'c5fd253b8cc74963ad9baae1f724475a' },
         type: "GET",
         url: "https://api.football-data.org/v2/competitions/SA/matches?matchday="+ optionValue.value,
        dataType: "json",
         success: function (response) {
-            
+
             $.each(response.matches,function(i, data){
                 const homeTeam = document.createElement('p')
                 homeTeam.innerText = data.homeTeam.name 
@@ -156,6 +166,18 @@ function showData(){
                     boxAwayTeam.style.borderBottomStyle="solid"
                     boxAwayTeam.style.borderBottomColor="red"
                     boxAwayTeam.style.borderBottomRightRadius="10px"
+                }else if(data.score.winner === "DRAW"){
+                    boxHomeTeam.style.borderBottom="15px"
+                    boxHomeTeam.style.borderBottomStyle="solid"
+                    boxHomeTeam.style.borderBottomColor="gray"
+                    boxHomeTeam.style.borderBottomLeftRadius="10px"
+
+
+                    boxAwayTeam.style.borderBottom="15px"
+                    boxAwayTeam.style.borderBottomStyle="solid"
+                    boxAwayTeam.style.borderBottomColor="gray"
+                    boxAwayTeam.style.borderBottomRightRadius="10px"
+
                 }else{
                     boxHomeTeam.style.borderBottom="15px"
                     boxHomeTeam.style.borderBottomStyle="solid"
