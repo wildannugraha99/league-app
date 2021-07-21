@@ -1,7 +1,7 @@
 $.ajax({
 	headers: { 'X-Auth-Token': 'c5fd253b8cc74963ad9baae1f724475a' },
 	type: "GET",
-	url: "https://api.football-data.org/v2/competitions/2019/standings",
+	url: "https://api.football-data.org/v2/competitions/SA/standings",
 	dataType: "json",
 	success: function (response) {
 		console.log('Standings', response)

@@ -56,12 +56,3 @@ $.ajax({
     }
 });
 
-$.ajax({
-    headers: { 'X-Auth-Token': 'c5fd253b8cc74963ad9baae1f724475a' },
-    type: "GET",
-    url: "http://api.football-data.org/v2/competitions/PL/scorers",
-    dataType: "json",
-    success: function (response) {
-        console.log("PL", response)
-    }
-});

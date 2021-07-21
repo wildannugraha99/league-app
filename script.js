@@ -7,8 +7,6 @@ $.ajax({
 	data: "data",
 	dataType: "json",
 	success: function (response) {
-		console.log('Premiere League',response)
-
 		const seasons = document.querySelector('.seasons-premiere-league')
 		seasons.innerText = 'Seasons: '+ response.season.startDate + ' / '+ response.season.endDate 
 
@@ -31,8 +29,8 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-seeSquad disabled" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-disabled="true">
-			See Squads</button>`
+			btnSeeSquad.innerHTML =`<button class="btn-seeSquad" data-id="${data.id}" data-bs-toggle="modal" data-bs-target="#squadModal">
+			See Players</button>`
 
 			const CardsFooter = document.createElement('div')
 			CardsFooter.classList.add('cards-footer')
@@ -61,11 +59,11 @@ $.ajax({
 $.ajax({
 	headers: { 'X-Auth-Token': 'c5fd253b8cc74963ad9baae1f724475a' },
 	type: "GET",
-	url: 'https://api.football-data.org/v2/competitions/2019/teams',
+	url: 'https://api.football-data.org/v2/competitions/SA/teams',
 	data: "data",
 	dataType: "json",
 	success: function (response) {
-		console.log('Serie A', response)
+		
 
 		const seasons = document.querySelector('.seasons-serie-a')
 		seasons.innerText = 'Seasons: '+ response.season.startDate + ' / '+ response.season.endDate 
@@ -89,8 +87,8 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-seeSquad"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-			See Squads</button>`
+			btnSeeSquad.innerHTML =`<button class="btn-seeSquad" data-id="${data.id}" data-bs-toggle="modal" data-bs-target="#squadModal">
+			See Players</button>`
 
 			const CardsFooter = document.createElement('div')
 			CardsFooter.classList.add('cards-footer')
@@ -125,7 +123,7 @@ $.ajax({
 	data: "data",
 	dataType: "json",
 	success: function (response) {
-		console.log('Bundesliga', response)
+	
 
 		const seasons = document.querySelector('.seasons-bundesliga')
 		seasons.innerText = 'Seasons: '+ response.season.startDate + ' / '+ response.season.endDate
@@ -149,8 +147,8 @@ $.ajax({
 			Team Info</button>`
 			
 			const btnSeeSquad = document.createElement('div')
-			btnSeeSquad.innerHTML =`<button class="btn-SeeSquad" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-			See Squads</button>`
+			btnSeeSquad.innerHTML =`<button class="btn-seeSquad" data-id="${data.id}" data-bs-toggle="modal" data-bs-target="#squadModal">
+			See Players</button>`
 
 			const CardsFooter = document.createElement('div')
 			CardsFooter.classList.add('cards-footer')
@@ -183,7 +181,7 @@ $(".main-content").on('click', ".btn-teamDetail", function () {
 		dataType: "json",
 		success: function (response) {
 			
-			$('.modal-body').html(`
+			$('.modal-body-1').html(`
 				<div class="modalLogoTeam">
 					<img src="${response.crestUrl}">
 					
@@ -198,8 +196,6 @@ $(".main-content").on('click', ".btn-teamDetail", function () {
 					<p><b>Phone: </b>${response.phone}</p>
 					<p><b>Website: </b><a href="${response.website}" target="_blank">${response.website}</a></p>
 					<p><b>Address: </b>${response.address}</p>
-
-					<p>${response.squad}</p>
 				</div>
 			`)
 
@@ -208,6 +204,49 @@ $(".main-content").on('click', ".btn-teamDetail", function () {
 })
 
 //-----------------------------------------------------------------------------------------------------------------//
+$(".main-content").on('click', ".btn-seeSquad", function () {
+	$('.modal-body-2').html('');
+   
+	$.ajax({
+		headers: { 'X-Auth-Token': 'c5fd253b8cc74963ad9baae1f724475a' },
+		type: "GET",
+		url: 'http://api.football-data.org/v2/teams/'+$(this).data('id'),
+		dataType: "json",
+		success: function (response) {
+			document.querySelector('.modal-header-2').innerHTML=""
+
+				
+				const modalName = document.createElement('h4')
+				modalName.innerHTML = `<img src="${response.crestUrl}" alt="logo">  ${response.shortName} Players`
+	
+				const modalHead = document.querySelector('.modal-header-2')
+				modalHead.append(modalName)
+			
+			
+			
+			$.each(response.squad, function (i, data) { 
+				
+			
+				const playerName = document.createElement('h5')
+				playerName.innerHTML =`<b>${data.name} (${data.shirtNumber})</b>`
+				const playerPosition = document.createElement('p')
+				playerPosition.innerHTML = `<p><b>Position: </b> ${data.position}</p>`
+				const playerNation = document.createElement('p')
+				playerNation.innerHTML = `<p><b>Nationality: </b> ${data.nationality}</p>`
+
+				const playerCard = document.createElement('div')
+				playerCard.classList.add('player-card')
+				playerCard.append(playerName,playerPosition,playerNation)
+
+				const modalBody = document.querySelector('.modal-body-2')
+				modalBody.append(playerCard)
+			});
+		}
+	});
+})
+
+	
+	
 
 
 //-----------------------------------------------------------------------------------------------------------------//
@@ -232,4 +271,4 @@ $(document).ready(function(){
 
 
 
- 
+  

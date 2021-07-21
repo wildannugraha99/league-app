@@ -223,11 +223,12 @@ body{
    font-weight: bold;
 }
 
-.modal-body{
-   
+.modal-body-1{
    display: flex;
    flex-direction: column;
 }
+
+
 
 .modalLogoTeam img{
    width: 80%;
@@ -372,6 +373,8 @@ body{
       padding: 2% 5%;
     }
 
+}
+
 /*-------------------MODAL STYLES---------------------*/
 .modal-header,.modal-footer {
    background-color: whitesmoke;
@@ -387,7 +390,7 @@ body{
    font-weight: bold;
 }
 
-.modal-body{
+.modal-body-1{
    flex-direction: row;
    text-align: unset;
 }
@@ -398,7 +401,21 @@ body{
    text-align: center;
 }
 
-
-
+.modal-header-2 img{
+   width: 10%;
 }
+
+.player-card{
+   margin-bottom: 3%;
+   padding: 3% 5% 1% 5%;
+   border: 1px solid whitesmoke;
+   box-shadow: 2.5px 6px 0 rgba(188, 187, 189, 0.7);
+   border-radius: 15px;
+   background-color: whitesmoke;
+}
+
+.player-card p:nth-child(3){
+   margin-top: -3%;
+}
+
 /*---------------------------------------------------------------------------*/
