@@ -210,23 +210,18 @@ $(".main-content").on('click', ".btn-seeSquad", function () {
 	$.ajax({
 		headers: { 'X-Auth-Token': 'c5fd253b8cc74963ad9baae1f724475a' },
 		type: "GET",
-		url: 'http://api.football-data.org/v2/teams/'+$(this).data('id'),
+		url: 'https://api.football-data.org/v2/teams/'+$(this).data('id'),
 		dataType: "json",
 		success: function (response) {
 			document.querySelector('.modal-header-2').innerHTML=""
-
-				
 				const modalName = document.createElement('h4')
 				modalName.innerHTML = `<img src="${response.crestUrl}" alt="logo">  ${response.shortName} Players`
 	
 				const modalHead = document.querySelector('.modal-header-2')
 				modalHead.append(modalName)
 			
-			
-			
 			$.each(response.squad, function (i, data) { 
 				
-			
 				const playerName = document.createElement('h5')
 				playerName.innerHTML =`<b>${data.name} (${data.shirtNumber})</b>`
 				const playerPosition = document.createElement('p')
