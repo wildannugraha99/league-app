@@ -4,7 +4,7 @@ $.ajax({
     url: "https://api.football-data.org/v2/competitions/SA/matches?matchday=20",
     dataType: "json",
     success: function (response) {
-       
+        
             $('.html-root-info').html(`
                 <div class="image-league">
                 <img src="assets/serieA-removebg-preview (1).png" alt="image league" class="img-league">
