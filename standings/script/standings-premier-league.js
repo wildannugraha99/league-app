@@ -1,10 +1,10 @@
 $.ajax({
 	headers: { 'X-Auth-Token': 'c5fd253b8cc74963ad9baae1f724475a' },
 	type: "GET",
-	url: "https://api.football-data.org/v2/competitions/2002/standings",
+	url: "https://api.football-data.org/v2/competitions/PL/standings",
 	dataType: "json",
 	success: function (response) {
-		console.log('Standings', response)
+		
 
         const competitionName = document.createElement('h5')
         competitionName.innerText=response.competition.name

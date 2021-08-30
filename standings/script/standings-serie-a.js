@@ -4,8 +4,7 @@ $.ajax({
 	url: "https://api.football-data.org/v2/competitions/SA/standings",
 	dataType: "json",
 	success: function (response) {
-		console.log('Standings', response)
-
+	
         const competitionName = document.createElement('h5')
         competitionName.innerText=response.competition.name
 
